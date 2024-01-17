@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    size: 10%;
+    font-weight: bold;
+}
+
+nav .hamburger-menu {
+    width:15px;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top left, white 10%, coral 10%);
+    background:    -moz-linear-gradient(top left, white 10%, coral 10%);
+    background:     -ms-linear-gradient(top left, white 10%, coral 10%);
+    background:      -o-linear-gradient(top left, white 10%, coral 10%);
+    background:         linear-gradient(top left, white 10%, coral 10%);
+    cursor: pointer;
+    display: none; /* Initially hide for larger screens */
+    position:fixed;
+    left:10px
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.video-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    
+}
+.nav-links{
+display: none;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Responsive Navigation */
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav .container {
+        padding: 10px;
+    }
+
+    nav .nav-links {
+        display: none;
+        width: 100%;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    nav .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-end;
+    }
+nav.logo .nav-links.show{
+    display:none;
+}
+    nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    nav ul li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    nav .hamburger-menu {
+        display: block;
+    }
+
+    #navbarr{
+        display: none;
+    }
+    body {
+        overflow-x: hidden;
+    }
